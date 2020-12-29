@@ -207,6 +207,78 @@
 		},
 		"/RoboDesigner.java": {
 			"sdcard": false
+		},
+		"/entities": {
+			"sdcard": false
+		},
+		"/entities/Robo.java": {
+			"sdcard": false
+		},
+		"/sprites": {
+			"sdcard": false
+		},
+		"/Castpixel16.pal": {
+			"sdcard": false
+		},
+		"/sprites/Head.aseprite": {
+			"sdcard": false
+		},
+		"/sprites/Head.json": {
+			"implements": "",
+			"palette": "[default]",
+			"palOffset": 0,
+			"sdcard": false
+		},
+		"/sprites/Head.png": {
+			"implements": "",
+			"palette": "[default]",
+			"palOffset": 0,
+			"sdcard": false
+		},
+		"/sprites/Body.aseprite": {
+			"sdcard": false
+		},
+		"/sprites/Body.json": {
+			"implements": "",
+			"palette": "[default]",
+			"palOffset": 0,
+			"sdcard": false
+		},
+		"/sprites/Body.png": {
+			"implements": "",
+			"palette": "[default]",
+			"palOffset": 0,
+			"sdcard": false
+		},
+		"/sprites/Arm.aseprite": {
+			"sdcard": false
+		},
+		"/sprites/Arm.json": {
+			"implements": "",
+			"palette": "[default]",
+			"palOffset": 0,
+			"sdcard": false
+		},
+		"/sprites/Arm.png": {
+			"implements": "",
+			"palette": "[default]",
+			"palOffset": 0,
+			"sdcard": false
+		},
+		"/sprites/Leg.aseprite": {
+			"sdcard": false
+		},
+		"/sprites/Leg.json": {
+			"implements": "",
+			"palette": "[default]",
+			"palOffset": 0,
+			"sdcard": false
+		},
+		"/sprites/Leg.png": {
+			"implements": "",
+			"palette": "[default]",
+			"palOffset": 0,
+			"sdcard": false
 		}
 	},
 	"ideVersion": 10000,
