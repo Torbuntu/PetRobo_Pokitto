@@ -88,18 +88,9 @@ class RoboDesigner extends State {
             stg = 1;
             spd = 1;
             switch(hc){
-                case 9:
-                    pwr++;
-                    robo.setHead(0);
-                    break;
-                case 7:
-                    stg++;
-                    robo.setHead(2);
-                    break;
-                case 2:
-                    spd++;
-                    robo.setHead(1);
-                    break;
+                case 9:pwr++;robo.setHead(0);break;
+                case 7:stg++;robo.setHead(2);break;
+                case 2:spd++;robo.setHead(1);break;
             }
             switch(bc){
                 case 9:pwr++;robo.setBody(0);break;
@@ -154,56 +145,82 @@ class RoboDesigner extends State {
         screen.setTextColor(15);
         screen.print("init() {");
         
-        screen.fillRect(20, 42, 40, 8, hc);
+        screen.fillRect(20, 42, 30, 4, hc);
+        screen.fillRect(56, 42, 12, 4, hc);
+        
+        screen.fillRect(20, 47, 10, 4, hc);
+        screen.fillRect(35, 47, 45, 4, hc);
+        
+        screen.fillRect(20, 52, 20, 4, hc);
+        
+        
         if(select == 0){
             if(blink < 25){
-                screen.fillRect(20, 42, 6, 8, 15);
+                screen.fillRect(20, 42, 4, 4, 15);
             }else{
-                screen.drawRect(20, 42, 6, 8, 15);
+                screen.drawRect(20, 42, 4, 4, 15);
             }
         }
         
-        screen.setTextPosition(12, 50);
+        screen.setTextPosition(12, 60);
         screen.print("}");
         
         
         // initialize strength
         screen.setTextColor(12);
-        screen.setTextPosition(12, 62);
+        screen.setTextPosition(12, 66);
         screen.print("void ");
         screen.setTextColor(15);
         screen.print("update() {");
         
-        screen.fillRect(20, 68, 40, 8, bc);
+        screen.fillRect(20, 72, 18, 4, bc);
+        screen.fillRect(44, 72, 24, 4, bc);
+        
+        screen.fillRect(20, 77, 36, 4, bc);
+        screen.fillRect(60, 77, 12, 4, bc);
+        
+        screen.fillRect(20, 82, 45, 4, bc);
+        screen.fillRect(70, 82, 20, 4, bc);
+        
+        
         if(select == 1){
             if(blink < 25){
-                screen.fillRect(20, 68, 6, 8, 15);
+                screen.fillRect(20, 72, 4, 4, 15);
             }else{
-                screen.drawRect(20, 68, 6, 8, 15);
+                screen.drawRect(20, 72, 4, 4, 15);
             }
         }
         
-        screen.setTextPosition(12, 76);
+        screen.setTextPosition(12, 90);
         screen.print("}");
         
         
         // initialize speed
         screen.setTextColor(12);
-        screen.setTextPosition(12, 90);
+        screen.setTextPosition(12, 96);
         screen.print("void ");
         screen.setTextColor(15);
         screen.print("action() {");
         
-        screen.fillRect(20, 96, 40, 8, lc);
+        screen.fillRect(20, 102, 18, 4, lc);
+        screen.fillRect(44, 102, 12, 4, lc);
+        screen.fillRect(62, 102, 24, 4, lc);
+        
+        screen.fillRect(20, 107, 8, 4, lc);
+        screen.fillRect(33, 107, 35, 4, lc);
+        
+        screen.fillRect(20, 112, 28, 4, lc);
+        
+        
         if(select == 2){
             if(blink < 25){
-                screen.fillRect(20, 96, 6, 8, 15);
+                screen.fillRect(20, 102, 4, 4, 15);
             }else{
-                screen.drawRect(20, 96, 6, 8, 15);
+                screen.drawRect(20, 102, 4, 4, 15);
             }
         }
         
-        screen.setTextPosition(12, 104);
+        screen.setTextPosition(12, 120);
         screen.print("}");
         
         
@@ -211,10 +228,22 @@ class RoboDesigner extends State {
         screen.setTextPosition(5, 166);
         screen.print("}");
         
-        robo.drawHead(screen, 140, 40);
-        robo.drawBody(screen, 140, 74);
-        robo.drawArm(screen, 132, 74);
-        robo.drawLeg(screen, 138, 130);
+        screen.fillCircle(165, 30, 20, hc);
+        // robo.drawHead(screen, 140, 40);
+        screen.fillRect(140, 56, 50, 35, bc);
+        // robo.drawBody(screen, 140, 74);
+        screen.fillRect(120, 60, 10, 30, lc);
+        screen.fillRect(200, 60, 10, 30, lc);
+        
+        screen.fillRect(150, 100, 10, 25, lc);
+        screen.fillRect(170, 100, 10, 25, lc);
+        
+        // robo.drawArm(screen, 132, 74);
+        // robo.drawLeg(screen, 138, 130);
+        
+        for(int i = 0; i < 4; i++){
+            screen.fillRect(130 + (i * 18), 150, 16, 16, 3);
+        }
         
         screen.flush();
     }
