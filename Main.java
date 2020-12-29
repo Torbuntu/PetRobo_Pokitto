@@ -21,23 +21,23 @@ class Main extends State {
         screen = new HiRes16Color(Psygnosia.palette(), TIC80.font());
     }
     
-    // Might help in certain situations
-    void shutdown(){
-        screen = null;
-    }
-    
     // update is called by femto.Game every frame
     void update(){
         screen.clear(0);
         // Change to a new state when A is pressed
         if( Button.A.justPressed() )
-            Game.changeState( new Main() );
+            Game.changeState( new RoboDesigner(screen) );
 
         screen.setTextColor(5);
         screen.setTextPosition(0,0);
         screen.print("Hello, Pet Robo");
         // Update the screen with everything that was drawn
         screen.flush();
+    }
+    
+    // Might help in certain situations
+    void shutdown(){
+        screen = null;
     }
     
 }

@@ -201,6 +201,12 @@
 		},
 		"/README.md": {
 			"sdcard": false
+		},
+		"/LICENSE": {
+			"sdcard": false
+		},
+		"/RoboDesigner.java": {
+			"sdcard": false
 		}
 	},
 	"ideVersion": 10000,
